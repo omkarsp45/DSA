@@ -1,4 +1,4 @@
-// Sparse Matrix Code
+// Sparse Matrix Code Struct
 
 #include<iostream>
 using namespace std;

@@ -9,6 +9,27 @@ class Node{
     Node* next;
 };
 
+// Added recursive method of printing ll 
+void display(Node *P){
+    if(P==nullptr){
+        cout<<endl;
+        return; 
+    }
+    else{
+        display(P->next);
+        cout<<P->data<<" ";  //prints reversely 
+    }
+}
+
+int count(Node *P){
+    int toR = 0; 
+    while(P!=nullptr){
+        P = P->next;
+        toR++;
+    }
+    return toR;
+}
+
 int main(){
     int A[] = {4,7,2,9,5,1};
     Node * head = new Node; 
@@ -33,10 +54,12 @@ int main(){
 
     // Displaying Linked List 
     Node *P = head; 
-    while(P->next!=nullptr){
-        cout<<P->data<<"->";
-        P = P->next;
-    }
-    cout<<P->data;
+    // display(P);
+    cout<<count(P);
+    // while(P->next!=nullptr){
+    //     cout<<P->data<<"->";
+    //     P = P->next;
+    // }
+    // cout<<P->data;
     return 0;
 }

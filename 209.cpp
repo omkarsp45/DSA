@@ -11,11 +11,11 @@ class Node{
     }
 };
 
-class LinkedList{
+class CircularLL{
     private:
     Node* head;
     public:
-    LinkedList(){
+    CircularLL(){
         head = nullptr;
     }
     void addLast(int element){
@@ -65,7 +65,7 @@ class LinkedList{
 };
 
 int main(){
-    LinkedList l;
+    CircularLL l;
     l.addLast(4);
     l.addLast(3);
     l.addLast(9);

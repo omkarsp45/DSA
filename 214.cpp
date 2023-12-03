@@ -65,12 +65,16 @@ class DoublyLL{
         Node* temp = head;
         if(temp->data==val){
             head = head->next;
+            head->prev = nullptr;
             return;
         }
         while(temp->data!=val){
             temp = temp->next;
         }
         temp->prev->next = temp->next;
+    }
+    int showPrev(int val){
+        return head->prev->data;
     }
 };
 
@@ -80,13 +84,7 @@ int main(){
     l.addLast(7);
     l.addLast(5);
     l.addLast(9);
-    l.addLast(2);
-    l.display();
-    l.addAfter(5,8);
-    l.display();
-    l.deleteElement(8);
-    l.display();
-    l.addLast(6);
+    // l.deleteElement(3);
     l.display();
     return 0;
 }
